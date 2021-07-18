@@ -44,15 +44,16 @@ h5{
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.nav{
+#navbar{
   display: flex;
   position: absolute;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
   margin: 0px auto;
   padding: 0%;
 }
-.nav a{
+#navbar a{
+  display: block;
   padding: 5px;
   width: 25%;
   text-align: center;
@@ -62,9 +63,13 @@ h5{
   background-color: rgb(196, 7, 7);
   font-size: 20px;
 }
-.nav a:hover{
+#navbar a:hover{
   color: white;
   background-color: rgb(211, 175, 84);
+}
+
+.content {
+  padding: 16px;
 }
 .contacts{
   text-align: center;

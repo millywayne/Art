@@ -22,22 +22,56 @@
     else, the experience in Africa is life changing. Art Culture dsiplays the culture in Africa, it gives a vivid
     description of what Africa is.</p>
 
-    <div class="row">
-      <div class="column">
-        <img src="images/arty.jpe" style="width: 200px; height: 250px;">
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <h5 class="bg-success">Dance</h5>
+          <img src="images/arty.jpe" style="width: 700px; height: 400px;">
       </div>
-      <div class="column">
-        <img src="images/sunset.jpe" style="width: 200px; height: 250px;">
+      <div class="mySlides">
+        <h5 class="bg-succes">Sunset</h5>
+          <img src="images/sunset.jpe" style="width: 700px; height: 400px;">
       </div>
-      <div class="column">
-        <img src="images/head.jpe" style="width: 200px; height: 250px;">
+      <div class="mySlides">
+        <h5 class="bg-success">Hair</h5>
+          <img src="images/head.jpe" style="width: 700px; height: 400px;">
       </div>
-      <div class="column">
-        <img src="images/food.jpe" style="width: 200px; height: 250px;">
+      <div class="mySlides">
+        <h5 class="bg-info">Cuisine</h5>
+          <img src="images/food.jpe" style="width: 700px; height: 400px;">
       </div>
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 5 seconds
+      }
+    </script>
+    <hr> &copy Art Culture
+  </div>
+  <script src="js/script.js"></script>
   </br>
-  <hr> &copy Art Culture
+  
 </body>
 
 </html>

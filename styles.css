@@ -3,7 +3,14 @@ body{
   color: black;
   font-weight: 600;
 }
-h1, h2, h3, h4{
+h1{
+  color: rgb(83, 5, 5);
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-style: oblique;
+}
+h2, h3, h4{
   color: rgb(196, 7, 7);
   text-align: center;
   font-size: larger;
@@ -68,67 +75,80 @@ h5{
   margin-left: auto;
   margin-right: auto;
 }
-.popup .overlay {
-  position:fixed;
-  top:0px;
-  left:0px;
-  width:100vw;
-  height:100vh;
-  background:rgba(0,0,0,0.7);
-  z-index:1;
-  display:none;
+.mySlides>img{
+    border-radius: 8px;
+}
+img {
+  border-radius: 50%;
+}
+.food {
+  position: relative;
+  width: 50%;
 }
 
-.popup .content {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%) scale(0);
-  background:#fff;
-  width:500px;
-  height:250px;
-  z-index:2;
-  text-align:center;
-  padding:20px;
-  box-sizing:border-box;
-  font-family:"Open Sans",sans-serif;
+.food>img{
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.popup .close-btn {
-  cursor:pointer;
-  position:absolute;
-  right:20px;
-  top:20px;
-  width:30px;
-  height:30px;
-  background:#222;
-  color:#fff;
-  font-size:25px;
-  font-weight:600;
-  line-height:30px;
-  text-align:center;
-  border-radius:50%;
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgb(211, 175, 84);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
 }
 
-.popup.active .overlay {
-  display:block;
+.food:hover .overlay {
+  bottom: 0;
+  height: 100%;
 }
 
-.popup.active .content {
-  transition:all 300ms ease-in-out;
-  transform:translate(-50%,-50%) scale(1);
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
-button {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  padding:15px;
-  font-size:18px;
-  border:2px solid #222;
-  color:#222;
-  text-transform:uppercase;
-  font-weight:600;
-  background:#fff;
+.image:hover {
+  transform: scaleX(-1);
+}
+#mc_embed_signup{
+  background: rgb(173, 141, 72);
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background:transparent;
+  color: white;
+
+}
+::-webkit-input-placeholder {
+  background:transparent;
+  color: white;
+}
+input[type=text],input[type=email],#comment{
+  background: transparent;
+  color: white;
+  font-size: 15px;
+  font-family:'Yanone Kaffeesatz', sans-serif;
 }

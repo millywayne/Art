@@ -157,3 +157,73 @@ input[type=text],input[type=email],#comment{
   font-size: 15px;
   font-family:'Yanone Kaffeesatz', sans-serif;
 }
+.accordion {
+  max-width: 800px;
+}
+
+.accordion .contentBx {
+  position: relative;
+  margin: 10px 20x
+}
+
+.accordion .contentBx .label {
+  position: relative;
+  padding: 10px;
+  background: rgb(196, 7, 7);
+  color: #fff;
+  cursor: pointer;
+}
+
+.accordion .contentBx .label::before {
+  content: '+';
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.accordion .contentBx .label::before {
+  content: '-'
+}
+
+.accordion .contentBx .content {
+  position: relative;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5%;
+  overflow: auto;
+}
+
+.accordion .contentBx .active .content {
+  height: 150px;
+  padding: 10px
+}
+
+#container {
+  background-color: rgb(170, 126, 45);
+  border: 1px solid beige;
+  width: 900px;
+  height: 275px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#btn {
+  color: aliceblue;
+  margin: 50px auto;
+  height: 50px;
+  width: 250px;
+  font-size: 20px;
+  background: rgb(196, 7, 7);
+}
+
+#output {
+  margin: 25px auto;
+  font-size: 23px;
+  color: antiquewhite;
+}
+strong{
+  color: rgb(236, 200, 132);
+}
